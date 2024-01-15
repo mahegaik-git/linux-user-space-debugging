@@ -1,0 +1,97 @@
+## GDB-Part1
+What is GDB
+
+Uses of GDB
+
+Languages supported
+
+Installing GDB
+
+
+How to use GDB
+- Adding flag
+- What does compiler include when we add flag
+   → Compare sizes
+   → ELF read
+- There are two ways to run GDB
+   → gdb <path-of-executable>
+   → gdb
+      ⇒ path <pass-relative-path>
+   → What happens if we try gdb on non debug symbol executable
+   → Can run in quiet mode by passing -q option to avoid too much info
+- Sample program
+   → do run to just execute program
+   → to quit gdb just type q or quit
+   → r can be used instead of r
+   →  we can use help and command name to know more
+/2
+- Breakpoints
+   → Main purpose is to use gdb with break point -> stop observe and proceed
+   → We wouldnt need it for running
+   → <purpose of breakpoint>
+   → We can use breakpoint on function name or line number
+      ⇒ break <function-name>
+      ⇒ break <line-number>
+   → To know what functions are available
+      ⇒ info functions
+         • Cannot debug glibc but only user defined functions
+      ⇒ break main
+   → To know line number or list source code
+      ⇒ list -> it will print 12 lines
+      ⇒ Can type list again to get more lines
+      ⇒ Again list for line 1 one can do line 1
+   → To know what all break points available
+      ⇒ info breakpoints
+   → Run program post adding break points
+   → Once  execution stops
+      ⇒ next can be run for every next command to be executed
+   → To finish function we can just do finish and that function will be completed
+   → To delete breakpoint 
+      ⇒ delete 1 or delete 2
+   → continue to proceed and hit next breakpoint
+      ⇒ run and continue difference
+   → we can use b and line number <b is shortcut>
+   → next will not step into a function
+      ⇒ Show example
+   → step will go inside function
+/3
+- How to pass command line argument from gdb
+   → Multiple ways to do so
+      ⇒ one way
+         • gdb --args <execuatble name> <argument>
+      ⇒ another way
+         • just do gdb <executable-name>
+         • r <pass neded argument>
+      ⇒ one more way
+         • set args is alos possible
+- code that crashes -> debugging segmentation fault
+   → let program crash
+      ⇒ buff = malloa(1<<31);
+   → backtrace / bt
+      ⇒ switch to frame
+         • frame 3
+            ◇ print value using print buff
+            ◇ p &<variable>
+         • Print command can be used to get value of variable
+         • we can print print sizeof(i)
+         • p /x can be printed in hexadecimal
+         • p /o for octal
+         • p /t in binary
+         • p /d for decimanb
+- examining code -> x stands for examining
+   → x get value of address
+   → x /4xb &i -> will show in bytes
+      ⇒ shows little endian for intel
+- To show type of varaible 
+   → use p with var name shows data type
+      ⇒ ptype <function-name>
+      ⇒ 
+      ⇒ 
+/5      
+- How to see string
+   → x/s msg
+- Setting variable 
+   → you can change value of varaibale using set
+      ⇒ set msg = “linux”
+- To rn previous command just keep entering  
+
