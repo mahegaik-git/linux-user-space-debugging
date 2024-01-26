@@ -1,0 +1,10 @@
+Function "m" not defined.
+Breakpoint 1 at 0x11bc: file prog1.c, line 4.
+Starting program: /home/mahesh/learnings/linux-user-space-debugging/my-linux-user-space-debugging/gdb-part2/3/prog1.o 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffdf58) at prog1.c:4
+4	{
+Continuing.
+[Inferior 1 (process 20788) exited normally]

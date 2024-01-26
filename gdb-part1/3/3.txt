@@ -1,0 +1,33 @@
+- How to pass command line argument from gdb
+   → Multiple ways to do so
+      ⇒ one way
+         • gdb --args <execuatble name> <argument>
+      ⇒ another way
+         • just do gdb <executable-name>
+         • r <pass neded argument>
+      ⇒ one more way
+         • set args is also possible
+   → Using SET command to set values of variable
+   → 
+   → Printing Values & addresses
+      ⇒ print value
+      ⇒ printing in base formats p /FMT
+         • hex /x
+         • dec /d
+         • octal /o
+         • binary /t
+      ⇒ p &Varaible
+      ⇒ p sizeof(variable)
+   → Examine the memory x 
+      ⇒  examining code -> x stands for examining
+         • x/FMT address
+      ⇒ x /4xb &i -> will show in bytes
+      ⇒ shows little endian for intel
+      ⇒ To show values in bytes
+         . also helps to know the endianess as it show how values are arranged in memory
+         • x/4xb &Value  
+            ◇ This does examining of memory as hex and in 4 bytes order
+   → pType -> this prints the data type
+  -> For string x/s will print string
+  -> Just x string var will print ascii value
+  -> p msg will print string

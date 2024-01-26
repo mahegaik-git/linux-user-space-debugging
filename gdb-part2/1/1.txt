@@ -1,0 +1,17 @@
+- info about stack frame
+   → (gdb) info frame 1 
+   → (gdb) info variables
+   → (gdb) info locals #lists local varaibles of current stack
+   → (gdb) info args #lists argument of current stack frame
+   → (gdb) info argv #arguments passes
+      ⇒ x/s argv[0] #shall give the path of programn
+   → (gdb) info regsiters #lists register values
+   → info specific registers -> i r
+      ⇒ We cannot print address of register variable
+         • p &regVar ->shall fail
+   → i r rbx shall give value rbx register holds
+   → 
+- Example of using register variable
+   → 
+	
+

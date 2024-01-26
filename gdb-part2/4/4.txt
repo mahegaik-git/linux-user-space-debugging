@@ -1,0 +1,37 @@
+Attaching GDB to running program 
+----------------------------------------------------------------------------------------------
+<prog1.c>
+- run gdb without prog name
+- attach <process-id>
+- inside gdb we can run shell command to find process id
+   → to pid of process
+      ⇒ shell ps -ef | grep <program-name>
+   → attach <pid> # remember to run gdb as sudo
+   → Once attach is succefful, it will stop execution
+      ⇒ where will tell where in execution we are
+         • can jump to program frame
+         • put breakpoint at specific value 
+   → to detach simple type
+      ⇒ detach
+
+
++1
+<prog2.c>
+- for checking assembly of c code
+   → in gdb 
+      ⇒ disassemble main
+         • helps to know assembly code for give c statement
+            ◇ +1 if possible -> compare #define & const
+- for having breakpoint by default at main
+   → start at gdb enabled breakpoint at main plus run -> this is timesaver
+- command  -> set of commands when breakpoint is reached
+   → to run specific command at a break point
+      ⇒ user can define command
+         • command 1
+            ◇ <what you wish to do> #say print some value p <variable-name>
+            ◇ end
+- To set breakpoint in project having multiple c file
+   → in gdb session
+      ⇒ break file-name.c: <function-name> OR <line-number>
+     
+

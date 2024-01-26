@@ -1,0 +1,12 @@
+- code that crashes -> debugging segmentation fault
+   → let program crash
+      ⇒ buff = malloc(1<<31);
+      ⇒ backtrace / bt
+- Switching frames
+   → useful in recursive function
+      ⇒ switch to frame
+         • use bt to know frames available
+         • frame and that frame number to switch         • 
+            ◇ print value using print buff for variable of that frame
+            ◇ p &<variable>  
+

@@ -1,0 +1,33 @@
+What is GDB
+- GDB stands for GNU Project Debugger 
+Uses of GDB
+- It helps to poke around code while they are executing
+- Helps to debug code flow & crashes
+
+Languages supported
+- GDB supports wide range of languages
+- Ada, Assembly, C, C++, D, Fortran, Haskell, Go, Objective-C, OpenCL C, Modula-2, Pascal, Rust
+
+Installing GDB
+- On UBUNTU system sudo apt install gdb
+
+How to use GDB
+- Adding flag
+   → One need to compile code using a flag [-g] that generates debug symbols
+   → -g : Produces debugging information in the operating system’s native format (stabs, COFF, XCOFF, or DWARF). 
+   →       GDB can work with this debugging information.      
+   → -ggdb : Produce debugging information for use by GDB. This means to use the most expressive format available 
+- What does compiler include when we add flag
+   → Compare sizes
+   → ELF read and compare
+- There are two ways to run GDB
+   → gdb <path-of-executable>
+   → gdb
+      ⇒ path <pass-relative-path>
+   → What happens if we try gdb on non debug symbol executable
+   → Can run in quiet mode by passing -q option to avoid too much info
+- Sample program
+   → do run to just execute program
+   → to quit gdb just type q or quit
+   → r can be used instead of r
+   →  we can use help and command name to know more

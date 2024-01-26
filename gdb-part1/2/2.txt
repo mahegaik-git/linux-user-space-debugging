@@ -1,0 +1,29 @@
+- Breakpoints
+   → Main purpose is to use gdb with break point -> stop observe and proceed
+   → We wouldnt need it for running
+   → <purpose of breakpoint>
+   → We can use breakpoint on function name or line number
+      ⇒ break <function-name>
+      ⇒ break <line-number>
+   → To know what functions are available
+      ⇒ info functions
+         • Cannot debug glibc but only user defined functions
+      ⇒ break main
+   → To know line number or list source code
+      ⇒ list -> it will print 12 lines
+      ⇒ Can type list again to get more lines
+      ⇒ Again list for line 1 one can do line 1
+   → To know what all break points available
+      ⇒ info breakpoints
+   → Run program post adding break points
+   → Once  execution stops
+      ⇒ next can be run for every next command to be executed
+   → To finish function we can just do finish and that function will be completed
+   → To delete breakpoint 
+      ⇒ delete 1 or delete 2
+   → continue to proceed and hit next breakpoint
+      ⇒ run and continue difference
+   → we can use b and line number <b is shortcut>
+   → next will not step into a function
+      ⇒ Show example
+   → step will go inside function

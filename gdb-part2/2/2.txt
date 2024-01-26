@@ -1,0 +1,35 @@
+Conditional Breakpoints
+--------------------------------------------------------------------
+<with prog1.c>
+- While Breakpoint enables program stops execution at that point
+- What if one needs to break when a specific condition is met
+   → say when for loop is at its second but last step or something else
+   → The way to do this is
+      ⇒ break <position> if <expression>
+      ⇒ <position> could be a function name of line number
+   →  if break point already exist then a condition can be appended
+      ⇒ condition <bp_number> <expression>
+
+Watchpoints
+-----------------------------------------------------------------------
+<with prog2.c>
+- Watchpoints are similar to breakpoints
+   → Are set on variables
+   → Triggered when variables are read or write  
+   → Variable on which watchpoint needs to be set should be in curent scope of execution
+   → watchpoint can be anytime set on global variables
+- How to set watchpoint on a varaiable
+   → There are three wtachpoints
+      ⇒ WRITE
+         • watch <variable-name>
+      ⇒ READ
+         • rwatch <variable-name>
+      ⇒ READ & WRITE
+         • awatch <variable-name>          • 
+      ⇒ single step shall not get watchbreakpoint
+      ⇒ to disable watchpoint
+         • disable <breakpoint number>
+      ⇒ to enable wtahcpoint
+         • disable <breakpoint number>
+      ⇒ to delete watch simply delete breakpoint
+- watch breakpoints are non persistent, if we restart they are lost

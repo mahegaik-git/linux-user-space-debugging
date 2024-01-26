@@ -1,0 +1,20 @@
+Temporary breakpoint 1 at 0x11bc: file prog1.c, line 4.
+Starting program: /home/mahesh/learnings/linux-user-space-debugging/my-linux-user-space-debugging/gdb-part2/3/prog1.o 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=1, argv=0x7fffffffdf58) at prog1.c:4
+4	{
+5	    int tempVar = -1;
+6	    printf("Enter a number between 1 to 5 : "); 
+7	    scanf("%d",&tempVar);
+8	    switch (tempVar)
+Continuing.
+[Inferior 1 (process 20724) exited normally]
+Breakpoint 1 at 0x11bc: file prog1.c, line 4.
+Continuing.
+
+Breakpoint 2, main (argc=1, argv=0x7fffffffdf58) at prog1.c:26
+__libc_start_call_main (main=main@entry=0x5555555551a9 <main>, argc=argc@entry=1, argv=argv@entry=0x7fffffffdf58) at ../sysdeps/nptl/libc_start_call_main.h:74
+[Inferior 1 (process 20824) exited normally]
+The program is not being run.

@@ -1,0 +1,33 @@
+Text User Interface (TUI)
+--------------------------------------------------------------------------------------------------------------------------------
+<prog1.c>
+- To check the program under gdb we can do list while in gdb
+- There is one more utility from gdb -> GUI based -> called as TUI
+- TUI uses curses library to show [suitable curses librray must be available on host]
+   → source file
+   → assembly output
+   → program registers
+   → GDB commands
+- TUI open in seprate window
+- To open TUI
+   → gdb -tui or gdbtui
+- If gdb is already running and one needs to see code under TUI
+   → use Ctrl-x a
+- TUI might need refresh to show updated breakpoints
+   → Ctrl - l [this repaints screen and often useful in printf scenarios]
+- To switch focus between windows 
+   → Ctrl-x o [ and arrow key shall work as in normal command line mode]
+-
+Enable logging
+---------------------------------------------------------------------------------------------------------------------------------
+- To save outputs of GDB console one can enable GDB logging 
+- To set logging on
+   → enable logging
+      ⇒ set logging on
+         • all outputs and commands executed are henceforth saved to gdb.txt in same directory
+   → disable logging
+      ⇒ set logging off
+         • Note that enabling and disabling logging shall concatenate output to pre-create log file
+   → To enable logging to a user defined file name
+      ⇒ set logging file <file-name> #default is always gdb.txt
+> p <var> , x/s etc...are logged in txt file
