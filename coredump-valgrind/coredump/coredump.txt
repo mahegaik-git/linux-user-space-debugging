@@ -1,0 +1,44 @@
+Core Dump
+-------------------------------------------------------------------------------------------------------------------------
+- A “core dump” is a snapshot of memory at the instant the program crashed
+   → Typecally saved in a file called “core”
+-  Core contains the memory content of the process at the point crash, which includes
+   → code segment
+   → data segment
+   → stack segment
+   → heap segment
+- Why core dump 
+   → Core dump enables to save a crash information for later analysis
+   → It enables debugging of crash on another computer 
+      ⇒ where debugging on embedded targets is of challenge
+
+- Resource Limits
+   → Every process has various limits associated with it
+   → $ man setrlimit
+   → Bash offers a built-in ulimit through which we can edit these
+   → Know or define Core file size / limits
+      ⇒ ulimit -c
+         • shall show how much is being set
+      ⇒ ulimit -c unlimited  
+         • in ubuntu i had to stop apport service to get core files
+            ◇ sudo service apport stop
+- Core could be found where program executable exist
+   → check the size of core and size of binary
+<prog1.c> & <prog2.c>
+- To analyze the core file - EXAMINE
+   → gdb <executable-file> <core-file>
+      ⇒ remember the executable needs to have debug information
+      ⇒ CHECK THE CORE FILE SIZE
+- Coredump enable to get snapshot of program memory when progam was running
+   → use prog3.c and make it run
+   → on another window run gdb and find pid and then do following
+      ⇒ perform attach <pid>
+      ⇒ generate-core-file
+      ⇒ detach
+   → analyze the coredump file
+- Coredump can be also obtained by
+   → kill -s SIGABRT <PID>
+      ⇒ This can help to analyze piece of code which is stuck and not exiting
+- We can also generate coredump from code by
+   → use abort() within the code
+
