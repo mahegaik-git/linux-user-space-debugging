@@ -1,0 +1,20 @@
+Valgrind
+--------------------------------------------------------------------------------------------------------------------
+◇ Valgrind - purpose - Programatical errors which arent caught by compiler 
+- Debugging tool, it has wrapper around various tools used for debugging
+- Valgrind Memcheck is a tool that detects memory leaks and memory errors. 
+- Some of the most difficult C bugs come from mismanagement of memory
+   → allocating the wrong size 
+   → using an uninitialized pointer
+      ⇒ -wall flag will enable gcc to identify this 
+   → accessing memory after it was freed
+   → overrunning a buffer, and so on.
+
+- Some of Memory access violations  → some of these seems to have been caught with latest gcc
+   → using uninitialized variables
+   → memory out of bonds [r/w overflowa/underflow]
+   → uaf - use after free 
+   → uar - use after return -> out of scope bugs
+- To run vallgrind
+   → $valgrind --tool=memcheck --leak-check=yes <./prog-executable-name>
+- Demo of leaky programs
