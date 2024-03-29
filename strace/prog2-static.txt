@@ -1,0 +1,19 @@
+execve("./prog2.o", ["./prog2.o"], 0x7ffe98374b60 /* 47 vars */) = 0
+arch_prctl(0x3001 /* ARCH_??? */, 0x7fff4c5a3270) = -1 EINVAL (Invalid argument)
+brk(NULL)                               = 0x21d0000
+brk(0x21d0dc0)                          = 0x21d0dc0
+arch_prctl(ARCH_SET_FS, 0x21d03c0)      = 0
+set_tid_address(0x21d0690)              = 8577
+set_robust_list(0x21d06a0, 24)          = 0
+rseq(0x21d0d60, 0x20, 0, 0x53053053)    = 0
+uname({sysname="Linux", nodename="mahesh", ...}) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+readlink("/proc/self/exe", "/home/mahesh/learnings/forgit/li"..., 4096) = 71
+getrandom("\x9f\x71\x51\x16\x82\xd5\x14\x9e", 8, GRND_NONBLOCK) = 8
+brk(0x21f1dc0)                          = 0x21f1dc0
+brk(0x21f2000)                          = 0x21f2000
+mprotect(0x4c1000, 16384, PROT_READ)    = 0
+newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+write(1, "Hello Linux\n", 12)           = 12
+exit_group(12)                          = ?
++++ exited with 12 +++
